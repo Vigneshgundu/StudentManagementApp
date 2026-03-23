@@ -7,20 +7,20 @@ import jakarta.persistence.Id;
 @Entity
 public class Course {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long course_id;
+
+    public Long getCourse_id() {
+        return course_id;
+    }
+
+    public void setCourse_id(Long course_id) {
+        this.course_id = course_id;
+    }
 
     private String courseName;
     private int durationMonths ;
     private String description;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getCourseName() {
         return courseName;
